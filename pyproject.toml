@@ -1,0 +1,23 @@
+[project]
+name = "dyutas-ai"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "hyun",email = "ghkdgus29@naver.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13, <4.0"
+dependencies = [
+    "fastapi (>=0.119.0,<0.120.0)",
+    "langchain (>=1.0.0,<2.0.0)",
+    "uvicorn (>=0.38.0,<0.39.0)",
+    "dependency-injector (>=4.48.2,<5.0.0)",
+    "langchain-groq (>=1.0.0,<2.0.0)",
+    "pytest (>=8.4.2,<9.0.0)",
+    "pydantic-settings (>=2.11.0,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
