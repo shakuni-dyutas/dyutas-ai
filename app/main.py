@@ -1,12 +1,11 @@
 from fastapi import FastAPI
-from app.core.config import Settings
+
 from app.core.container import Container
 from app.router import judge
 
 
 def create_app() -> FastAPI:
     container = Container()
-    container.config.from_pydantic(Settings())  # type: ignore[call-arg]
 
     router_modules = [
         judge,

@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 
-from app.core.domains.judge.model import JudgeMaterial
+from app.core.domains.judge.model import JudgeMaterial, Keyword
 
 
 class JudgeRequest(BaseModel):
@@ -20,3 +20,4 @@ class JudgeResponse(BaseModel):
     winner_party_id: str
     verdict: str
     reason: str
+    keywords: list[Keyword]
