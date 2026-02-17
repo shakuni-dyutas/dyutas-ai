@@ -1,13 +1,13 @@
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    groq_model_name: str
-    groq_api_key: str
+    openai_model_name: str
+    openai_api_key: str
 
-    langsmith_tracing: bool = False
+    langsmith_tracing: str = "false"
     langsmith_api_key: str = ""
     langsmith_project: str = ""
+    langsmith_endpoint: str = ""
 
-    class Config:
-        env_file = ".env"
+    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
